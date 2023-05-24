@@ -1,0 +1,111 @@
+{
+  "main_title": "Hello! I'm Erwin",
+  "greeting": "Glad to see you!",
+  "subtitle": "With 6 years experience developing functional website, company profile, and android apps for big company in Indonesia, now I'm ready to help you and your company to achieve more!",
+  "main_pict": "../assets/image/me/me-no-bg.png",
+  "social": [
+    {
+      "name": "LinkedIn",
+      "url": "https://www.linkedin.com/in/erwin-idamsyach-putra-481291117/"
+    },
+    {
+      "name": "Medium",
+      "url": "https://medium.com/@idamsyach"
+    },
+    {
+      "name": "Email",
+      "url": "idamsyach@gmail.com"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Time Slot Booking",
+      "client": "Unilever Skin Care Factory, Cikarang, Indonesia",
+      "image_hero": "assets/image/tsb2.jpg",
+      "list_image": [],
+      "story": "Raw material is an important thing in manufacturing. Raw material always required to arrive at manufacturing site on time, and because the limited capacity of Raw Material Storage (RMS) on manufacturing site, the raw material can't be store for too long to prevent storage overload. That's why Time Slot Booking is created. Time Slot Booking helps manufacturer to plan the delivery schedule of requested material to vendor specifically until when the material is needed on site. Besides that, Time Slot Booking can be used as controlling and receiving tools, because Time Slot Booking also have mobile apps that used for controlling the accuracy of type and amount that sended by vendor, and it also already connected with SAP GR module, so the storage crew doesn't need to work on multiple platform form receiving items.",
+      "tech": [
+        {
+          "name": "PHP",
+          "percent": "80%"
+        },
+        {
+          "name": "Flutter",
+          "percent": "15%"
+        },
+        {
+          "name": "AS2",
+          "percent": "5%"
+        }
+      ]
+    },
+    {
+      "name": "Digital Planned Maintenance",
+      "client": "Unilever Skin Care Factory, Cikarang, Indonesia",
+      "image_hero": "assets/image/digi1.jpg",
+      "list_image": [],
+      "story": "Production machine is important aspect in manufacturing because it's producting goods to sell to the consumer. Production machine is required to have zero downtime and zero breakdown, to achieve that, the machine needs to maintained based on it's machine hour. Digital Planned Maintenance helps engineering teams to manage the data of machine hours and get the informations about when the machine is need to be check or repaired.",
+      "tech": [
+        {
+          "name": "PHP",
+          "percent": "60%"
+        },
+        {
+          "name": "Flutter",
+          "percent": "40%"
+        }
+      ]
+    },
+    {
+      "name": "SISKA - Sistem Informasi Pencari Kerja",
+      "client": "Dinas Tenaga Kerja Kota Balikpapan, East Kalimantan, Indonesia",
+      "image_hero": "assets/image/siska.jpg",
+      "list_image": [],
+      "story": "SISKA is an applications used by the job seeker and the government to find, apply, and posting new job vacancy. SISKA helps the government by managing the data of the job seeker become single data. The job seeker helped by this application because they don't need to find the job vacancy one by one, just in the single apps to see many job vacancy that available in Kota Balikpapan. SISKA also become the single ID of the job seeker by using the 'Kartu Pencaker' feature that shows yellow card of job seeker ID.",
+      "tech": [
+        {
+          "name": "Flutter",
+          "percent": "70%"
+        },
+        {
+          "name": "PHP",
+          "percent": "30%"
+        }
+      ]
+    },
+    {
+      "name": "Nusantaraisme - Portal Pendaftaran Bacaleg",
+      "client": "Dinas Tenaga Kerja Kota Balikpapan, East Kalimantan, Indonesia",
+      "image_hero": "assets/image/nusan.PNG",
+      "list_image": [],
+      "story": "SISKA is an applications used by the job seeker and the government to find, apply, and posting new job vacancy. SISKA helps the government by managing the data of the job seeker become single data. The job seeker helped by this application because they don't need to find the job vacancy one by one, just in the single apps to see many job vacancy that available in Kota Balikpapan. SISKA also become the single ID of the job seeker by using the 'Kartu Pencaker' feature that shows yellow card of job seeker ID.",
+      "tech": [
+        {
+          "name": "Flutter",
+          "percent": "70%"
+        },
+        {
+          "name": "PHP",
+          "percent": "30%"
+        }
+      ]
+    },
+    {
+      "name": "Jamila Kavling",
+      "client": "Dinas Tenaga Kerja Kota Balikpapan, East Kalimantan, Indonesia",
+      "image_hero": "assets/image/jamila.PNG",
+      "list_image": [],
+      "story": "SISKA is an applications used by the job seeker and the government to find, apply, and posting new job vacancy. SISKA helps the government by managing the data of the job seeker become single data. The job seeker helped by this application because they don't need to find the job vacancy one by one, just in the single apps to see many job vacancy that available in Kota Balikpapan. SISKA also become the single ID of the job seeker by using the 'Kartu Pencaker' feature that shows yellow card of job seeker ID.",
+      "tech": [
+        {
+          "name": "Flutter",
+          "percent": "70%"
+        },
+        {
+          "name": "PHP",
+          "percent": "30%"
+        }
+      ]
+    }
+  ]
+}
