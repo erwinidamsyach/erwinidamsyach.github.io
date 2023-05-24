@@ -1,8 +1,8 @@
 {
-  "main_title": "Hello! I'm Erwin",
+  "main_title": "Hello, I'm Erwin",
   "greeting": "Glad to see you!",
-  "subtitle": "With 6 years experience developing functional website, company profile, and android apps for big company in Indonesia, now I'm ready to help you and your company to achieve more!",
-  "main_pict": "../assets/image/me/me-no-bg.png",
+  "subtitle": "I'm Erwin Idamsyach Putra, I graduated from Information Systems programme BINUS University on 2022 . I'm 24 y.o with 6 years experience developing functional website, company profile, and android apps for big company in Indonesia, now I'm ready to help you and your company to achieve more!",
+  "main_pict": "../assets/image/me/me-no-bg-4.png",
   "social": [
     {
       "name": "LinkedIn",
@@ -81,7 +81,7 @@
       "story": "SISKA is an applications used by the job seeker and the government to find, apply, and posting new job vacancy. SISKA helps the government by managing the data of the job seeker become single data. The job seeker helped by this application because they don't need to find the job vacancy one by one, just in the single apps to see many job vacancy that available in Kota Balikpapan. SISKA also become the single ID of the job seeker by using the 'Kartu Pencaker' feature that shows yellow card of job seeker ID.",
       "tech": [
         {
-          "name": "Flutter",
+          "name": "Vue",
           "percent": "70%"
         },
         {
@@ -98,12 +98,8 @@
       "story": "SISKA is an applications used by the job seeker and the government to find, apply, and posting new job vacancy. SISKA helps the government by managing the data of the job seeker become single data. The job seeker helped by this application because they don't need to find the job vacancy one by one, just in the single apps to see many job vacancy that available in Kota Balikpapan. SISKA also become the single ID of the job seeker by using the 'Kartu Pencaker' feature that shows yellow card of job seeker ID.",
       "tech": [
         {
-          "name": "Flutter",
-          "percent": "70%"
-        },
-        {
           "name": "PHP",
-          "percent": "30%"
+          "percent": "100%"
         }
       ]
     }
