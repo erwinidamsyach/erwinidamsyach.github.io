@@ -6,9 +6,12 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxt/image',
     '@nuxt/scripts',
-    '@nuxt/fonts'
+    '@nuxt/fonts',
+    'nuxt-studio'
   ],
+  content: {
 
+  },
   devtools: {
     enabled: true
   },
