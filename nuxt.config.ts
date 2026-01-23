@@ -9,21 +9,36 @@ export default defineNuxtConfig({
     '@nuxt/fonts',
     'nuxt-studio'
   ],
-  content: {
-
+  ssr: false, // Disable SSR for GitHub Pages
+  target: 'static',
+  
+  app: {
+    baseURL: '/', // Replace with your actual repository name
+    buildAssetsDir: 'assets',
+  },
+  
+  // Optional but recommended
+  nitro: {
+    preset: 'github-pages'
+  },
+  devServer: {
+    port: 3000, // Optional: specify your desired port
+    host: "0.0.0.0", // Listen on all network interfaces
   },
   devtools: {
     enabled: true
   },
+  content: {
 
+  },
+  image:{
+
+  },  
   css: ['~/assets/css/main.css'],
-
   routeRules: {
     '/': { prerender: true }
   },
-
   compatibilityDate: '2025-01-15',
-
   eslint: {
     config: {
       stylistic: {

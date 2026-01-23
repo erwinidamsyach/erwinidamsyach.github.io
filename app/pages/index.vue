@@ -1,76 +1,54 @@
+<script setup lang="ts">
+const { data: data } = await useAsyncData<any>('home-data', async () => {
+  const result = await queryCollection('data').first();
+  return result?.meta;
+});
+
+const {data: works} = await useAsyncData<any>('works', async () => {
+  return await queryCollection('works').all();
+});
+
+const {data: personal} = await useAsyncData<any>('personal', async () => {
+  return await queryCollection('personal').all();
+});
+</script>
 <template>
-  <div>
-    <UPageHero
-      title="Nuxt Starter Template"
-      description="A production-ready starter template powered by Nuxt UI. Build beautiful, accessible, and performant applications in minutes, not hours."
-      :links="[{
-        label: 'Get started',
-        to: 'https://ui.nuxt.com/docs/getting-started/installation/nuxt',
-        target: '_blank',
-        trailingIcon: 'i-lucide-arrow-right',
-        size: 'xl'
-      }, {
-        label: 'Use this template',
-        to: 'https://github.com/nuxt-ui-templates/starter',
-        target: '_blank',
-        icon: 'i-simple-icons-github',
-        size: 'xl',
-        color: 'neutral',
-        variant: 'subtle'
-      }]"
-    />
-
-    <UPageSection
-      id="features"
-      title="Everything you need to build modern Nuxt apps"
-      description="Start with a solid foundation. This template includes all the essentials for building production-ready applications with Nuxt UI's powerful component system."
-      :features="[{
-        icon: 'i-lucide-rocket',
-        title: 'Production-ready from day one',
-        description: 'Pre-configured with TypeScript, ESLint, Tailwind CSS, and all the best practices. Focus on building features, not setting up tooling.'
-      }, {
-        icon: 'i-lucide-palette',
-        title: 'Beautiful by default',
-        description: 'Leveraging Nuxt UI\'s design system with automatic dark mode, consistent spacing, and polished components that look great out of the box.'
-      }, {
-        icon: 'i-lucide-zap',
-        title: 'Lightning fast',
-        description: 'Optimized for performance with SSR/SSG support, automatic code splitting, and edge-ready deployment. Your users will love the speed.'
-      }, {
-        icon: 'i-lucide-blocks',
-        title: '100+ components included',
-        description: 'Access Nuxt UI\'s comprehensive component library. From forms to navigation, everything is accessible, responsive, and customizable.'
-      }, {
-        icon: 'i-lucide-code-2',
-        title: 'Developer experience first',
-        description: 'Auto-imports, hot module replacement, and TypeScript support. Write less boilerplate and ship more features.'
-      }, {
-        icon: 'i-lucide-shield-check',
-        title: 'Built for scale',
-        description: 'Enterprise-ready architecture with proper error handling, SEO optimization, and security best practices built-in.'
-      }]"
-    />
-
-    <UPageSection>
-      <UPageCTA
-        title="Ready to build your next Nuxt app?"
-        description="Join thousands of developers building with Nuxt and Nuxt UI. Get this template and start shipping today."
-        variant="subtle"
-        :links="[{
-          label: 'Start building',
-          to: 'https://ui.nuxt.com/docs/getting-started/installation/nuxt',
-          target: '_blank',
-          trailingIcon: 'i-lucide-arrow-right',
-          color: 'neutral'
-        }, {
-          label: 'View on GitHub',
-          to: 'https://github.com/nuxt-ui-templates/starter',
-          target: '_blank',
-          icon: 'i-simple-icons-github',
-          color: 'neutral',
-          variant: 'outline'
-        }]"
-      />
-    </UPageSection>
+  <div class="px-4 sm:px-6 lg:px-8 relative isolate">
+    <HeroBackground />
+    <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-4 pt-4 md:pt-16">
+      <div class="col-span-2 order-2 md:order-1">
+        <h1 class="text-4xl sm:text-6xl text-shadow-sm text-primary">{{ data.title }}</h1>
+        <p class="text-sm sm:text-lg leading-6 text-neutral dark:text-neutral-300 pt-4 md:pt-8">{{ data.description }}</p>
+      </div>
+      <div class="w-fit h-full border-1 border-dashed border-slate-400 p-2 order-1 md:order-2 justify-self-end md:justify-self-start">
+        <NuxtImg src="me-tokyo.jpg" sizes="35vw md:100vw" />
+      </div>
+    </div>
+  </div>
+  <div class="px-4 sm:px-6 lg:px-8 pt-8 sm:pt-10">
+    <h1 class="text-lg sm:text-xl text-shadow-sm text-primary pb-4">{{ data.section.work }}:</h1>
+    <div class="grid grid-cols-1 gap-4">
+      <UCard v-for="work in works" class="border border-neutral dark:border-primary" :ui="{body: 'sm:p-4'}">
+        <h1 class="text-lg text-neutral dark:text-primary font-semibold">{{ work.title }}</h1>        
+        <p class="text-xs text-neutral dark:text-slate-200">{{ work.meta.client }}</p>        
+        <div class="mt-2">
+          <UBadge v-for="tech in work.meta.tech" :label="tech" color="primary" class="mr-2 text-neutral dark:text-neutral-900 rounded-full"/>
+        </div>          
+      </UCard>
+    </div>      
+  </div>
+  <div class="px-4 sm:px-6 lg:px-8 pt-8 sm:pt-10">
+    <h1 class="text-lg sm:text-xl text-shadow-sm text-primary pb-4">{{ data.section.personal }}:</h1>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <UCard v-for="work in personal" class="border border-neutral dark:border-primary" :ui="{body: 'sm:p-4'}">
+        <h1 class="text-lg text-neutral dark:text-primary font-semibold flex items-center gap-2">
+          {{ work.title }}          
+        </h1>        
+        <p class="text-xs text-neutral dark:text-slate-200">{{ work.meta.client }}</p>        
+        <div class="mt-2">
+          <UBadge v-for="tech in work.meta.tech" :label="tech" color="primary" class="mr-2 text-neutral dark:text-neutral-900 rounded-full"/>
+        </div>          
+      </UCard>
+    </div>      
   </div>
 </template>
