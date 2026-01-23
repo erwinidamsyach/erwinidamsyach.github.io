@@ -21,7 +21,7 @@ const {data: personal} = await useAsyncData<any>('personal', async () => {
         <p class="text-sm sm:text-lg leading-6 text-neutral dark:text-neutral-300 pt-4 md:pt-8">{{ data.description }}</p>
       </div>
       <div class="w-fit h-full border-1 border-dashed border-slate-400 p-2 order-1 md:order-2 justify-self-end md:justify-self-start">
-        <NuxtImg src="me-tokyo.jpg" sizes="35vw md:100vw" />
+        <NuxtImg src="/me-tokyo.jpg" sizes="35vw md:100vw" />
       </div>
     </div>
   </div>

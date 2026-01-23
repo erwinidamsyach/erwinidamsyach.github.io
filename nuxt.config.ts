@@ -32,7 +32,7 @@ export default defineNuxtConfig({
 
   },
   image:{
-
+    provider: 'none',
   },  
   css: ['~/assets/css/main.css'],
   routeRules: {
