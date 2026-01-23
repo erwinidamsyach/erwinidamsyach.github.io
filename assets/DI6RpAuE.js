@@ -1,0 +1,1 @@
+import{E as n,l as p,o as r,J as c,G as u,H as i,K as s}from"./MsifVCmt.js";const m={base:"my-5 leading-7 text-pretty"},_={__name:"ProseP",props:{class:{type:null,required:!1}},setup(e){const a=e,t=n(),o=i(()=>s({extend:s(m),...t.ui?.prose?.p||{}}));return(l,d)=>(r(),p("p",{class:u(o.value({class:a.class}))},[c(l.$slots,"default")],2))}};export{_ as default};
