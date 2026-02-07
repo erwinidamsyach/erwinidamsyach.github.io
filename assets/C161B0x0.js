@@ -1,0 +1,1 @@
+import{a7 as n,l as r,o as c,L as p,ae as u,z as d,aj as e}from"./CNopyFM1.js";const m={base:"bg-muted"},h={__name:"ProseThead",props:{class:{type:null,required:!1}},setup(s){const a=s,t=n(),o=d(()=>e({extend:e(m),...t.ui?.prose?.thead||{}}));return(l,i)=>(c(),r("thead",{class:u(o.value({class:a.class}))},[p(l.$slots,"default")],2))}};export{h as default};

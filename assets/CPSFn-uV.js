@@ -1,0 +1,1 @@
+import{a7 as t,l,o as c,ae as n,z as p,aj as e}from"./CNopyFM1.js";const u={base:"border-t border-default my-12"},f={__name:"ProseHr",props:{class:{type:null,required:!1}},setup(s){const a=s,o=t(),r=p(()=>e({extend:e(u),...o.ui?.prose?.hr||{}}));return(m,i)=>(c(),l("hr",{class:n(r.value({class:a.class}))},null,2))}};export{f as default};

@@ -1,0 +1,1 @@
+import{a7 as n,l as r,o as c,L as p,ae as u,z as d,aj as s}from"./CNopyFM1.js";const i={base:""},_={__name:"ProseTbody",props:{class:{type:null,required:!1}},setup(e){const a=e,o=n(),t=d(()=>s({extend:s(i),...o.ui?.prose?.tbody||{}}));return(l,m)=>(c(),r("tbody",{class:u(t.value({class:a.class}))},[p(l.$slots,"default")],2))}};export{_ as default};
