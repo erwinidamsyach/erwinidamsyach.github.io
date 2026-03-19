@@ -11,6 +11,35 @@ const {data: works} = await useAsyncData<any>('works', async () => {
 const {data: personal} = await useAsyncData<any>('personal', async () => {
   return await queryCollection('personal').all();
 });
+
+const toast = useToast()
+
+function copyEmail() {
+  const email = data.value?.contact?.email
+  if (email) {
+    navigator.clipboard.writeText(email)
+    toast.add({
+      title: 'Email address copied!',
+      description: `paste it into your preferred email app to reach me.`,
+      icon: 'i-lucide-check-circle',
+      color: 'primary'
+    })
+  }
+}
+
+function copyPhone() {
+  const phone = data.value?.contact?.phone
+  if (phone) {
+    navigator.clipboard.writeText(phone)
+    toast.add({
+      title: 'Phone copied!',
+      description: 'You can now paste it into your phone client.', 
+      icon: 'i-lucide-check-circle',
+      color: 'primary'
+    }) 
+  }
+}
+
 const isOpen = ref(false);
 const selectedItem = ref<any>(null);
 
@@ -36,9 +65,9 @@ function openModal(item: any) {
       </div>
     </div>
     <div class="px-4 sm:px-6 lg:px-8 pt-8 sm:pt-10">
-      <h1 class="text-lg sm:text-xl text-shadow-sm text-primary pb-4">{{ data.section.work }}:</h1>
+      <h1 class="text-lg sm:text-xl text-shadow-sm text-primary pb-4">{{ data.section.work }}</h1>
       <div class="grid grid-cols-1 gap-4">
-        <UCard v-for="work in works" class="border border-neutral dark:border-primary cursor-pointer transition-transform hover:scale-[1.02]" :ui="{body: 'sm:p-4'}" @click="openModal(work)">
+        <UCard v-for="work in works" class="border border-neutral dark:border-primary cursor-pointer transition-transform" :ui="{body: 'sm:p-4'}" @click="openModal(work)">
           <h1 class="text-lg text-neutral dark:text-primary font-semibold">{{ work.title }}</h1>        
           <p class="text-xs text-neutral dark:text-slate-200">{{ work.meta.client }}</p>        
           <div class="mt-2">
@@ -48,9 +77,9 @@ function openModal(item: any) {
       </div>      
     </div>
     <div class="px-4 sm:px-6 lg:px-8 pt-8 sm:pt-10">
-      <h1 class="text-lg sm:text-xl text-shadow-sm text-primary pb-4">{{ data.section.personal }}:</h1>
+      <h1 class="text-lg sm:text-xl text-shadow-sm text-primary pb-4">{{ data.section.personal }}</h1>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <UCard v-for="work in personal" class="border border-neutral dark:border-primary cursor-pointer transition-transform hover:scale-[1.02]" :ui="{body: 'sm:p-4'}" @click="openModal(work)">
+        <UCard v-for="work in personal" class="border border-neutral dark:border-primary cursor-pointer transition-transform" :ui="{body: 'sm:p-4'}" @click="openModal(work)">
           <h1 class="text-lg text-neutral dark:text-primary font-semibold flex items-center gap-2">
             {{ work.title }}          
           </h1>        
@@ -60,6 +89,16 @@ function openModal(item: any) {
           </div>          
         </UCard>
       </div>      
+    </div>
+    <div class="px-4 sm:px-6 lg:px-8 pt-8 sm:pt-10 mb-8">
+      <UCard class="bg-lime-300 dark:bg-lime-500">
+        <h1 class="text-lg md:text-2xl text-neutral-800 font-semibold">I'm ready to work with you :)</h1>
+        <p class="text-xs text-neutral-600">Let's connect and discuss your project needs.</p>
+        <div class="flex items-center justify-start gap-2 mt-3">
+          <UButton icon="i-lucide-mail" color="primary" size="md" class="text-neutral-700" :label="data.section.contact" @click="copyEmail" />
+        <UButton icon="i-lucide-message-circle" color="primary" size="md" class="text-neutral-700" :label="data.section.contact_wa" :to="`https://wa.me/${data.contact.phone}`" />          
+        </div>          
+      </UCard>      
     </div>
 
     <UModal scrollable :open="isOpen" @close="isOpen = false" :ui="{ content: 'sm:max-w-3xl' }">
@@ -116,10 +155,13 @@ function openModal(item: any) {
 
           <!-- Body -->
           <div class="p-6 sm:p-8 prose dark:prose-invert max-w-none">
-            <ContentRenderer :value="selectedItem" />
-          </div>
+            <ContentRenderer :value="selectedItem" />            
+            <div class="flex align-center">
+              <UButton class="mx-auto mt-4" @click="isOpen = false">View All Projects</UButton>
+            </div>            
+          </div>                    
         </div>
-      </template>
+      </template>      
     </UModal>
   </div>
 </template>

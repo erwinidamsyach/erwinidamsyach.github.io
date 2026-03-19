@@ -1,5 +1,5 @@
 ---
-title: Integrated Survey Platform
+title: Kawan Riset
 type: SaaS
 tech:
   - NuxtJS
@@ -7,5 +7,3 @@ tech:
   - Docker
 link: Ongoing Project
 ---
-
-# Kawan Riset

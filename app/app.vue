@@ -27,7 +27,7 @@ useSeoMeta({
 
 <template>
   <div>
-    <UApp>
+    <UApp :toaster="{ position: 'top-center' }">
       <NuxtRouteAnnouncer />
       <NuxtLayout>
         <NuxtPage />

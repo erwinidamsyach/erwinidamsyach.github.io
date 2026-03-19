@@ -28,9 +28,7 @@ export default defineNuxtConfig({
   devtools: {
     enabled: true
   },
-  content: {
-
-  },
+  content: {},
   image:{
     provider: 'none',
   },  
