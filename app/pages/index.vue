@@ -76,20 +76,6 @@ function openModal(item: any) {
         </UCard>
       </div>      
     </div>
-    <div class="px-4 sm:px-6 lg:px-8 pt-8 sm:pt-10">
-      <h1 class="text-lg sm:text-xl text-shadow-sm text-primary pb-4">{{ data.section.personal }}</h1>
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <UCard v-for="work in personal" class="border border-neutral dark:border-primary cursor-pointer transition-transform" :ui="{body: 'sm:p-4'}" @click="openModal(work)">
-          <h1 class="text-lg text-neutral dark:text-primary font-semibold flex items-center gap-2">
-            {{ work.title }}          
-          </h1>        
-          <p class="text-xs text-neutral dark:text-slate-200">{{ work.meta.client }}</p>        
-          <div class="mt-2">
-            <UBadge v-for="tech in work.meta.tech" :label="tech" color="primary" class="mr-2 text-neutral dark:text-neutral-900 rounded-full"/>
-          </div>          
-        </UCard>
-      </div>      
-    </div>
     <div class="px-4 sm:px-6 lg:px-8 pt-8 sm:pt-10 mb-8">
       <UCard class="bg-lime-300 dark:bg-lime-500">
         <h1 class="text-lg md:text-2xl text-neutral-800 font-semibold">I'm ready to work with you :)</h1>

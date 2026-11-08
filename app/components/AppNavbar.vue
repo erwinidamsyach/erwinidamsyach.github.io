@@ -13,13 +13,13 @@
           >
             Home
           </NuxtLink>
-          <NuxtLink 
+          <!-- <NuxtLink 
             to="/blog" 
             active-class="underline decoration-nautral-500 dark:decoration-primary-400 decoration-2 underline-offset-4"
             class="hover:underline decoration-nautral-500 dark:decoration-primary-400 decoration-2 underline-offset-4 transition-all"
           >
             Blog
-          </NuxtLink>          
+          </NuxtLink>           -->
         </nav>
       </div>
 
